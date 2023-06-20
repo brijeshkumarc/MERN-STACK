@@ -1,0 +1,112 @@
+MERN Stack 
+
+Database Management System
+--------------------------
+> Used to store and manage large files
+
+> Componenets - hardware , software
+
+> Architecture - single-tier , two-tier , three-tier
+
+Server
+------
+> It recieves the clients request and respond to them.
+
+Types of Database
+-----------------
+> Distributed database - one table can be accessed by anyone.
+> Centeralization database - N number of tables can accessed by anyone.
+> Relational database - structured way of storing data.
+> Graph database - tree structured database (network database , hierarchy database)
+> NoSQL database - unstructured way of storing data.
+> Cloud database - high storage
+
+Components of database management system
+----------------------------------------
+> Configuting authentication and authorization
+> Providing data backup and snapshot
+> Storage engine
+> Query language
+> language engine
+> Meta data
+> Log manupulation
+
+Model data
+----------
+> ER model - pictorial representation,
+             structural database,
+             real world object-entity,
+             through SQL.
+
+> Object based data model - unstructured format,
+                            oops concept (ploymorpishm , encapsulation ,...),
+                            create a class instance automatically. 
+
+> Semi-structured model - MongoDB
+
+ER - Entity Relation model types
+
+> Entity - weak entity
+
+> Attribute - key attribute,
+              compute attribute,
+              multivalued attribute,
+              derived attribute.
+
+> Relation - one to one,
+             one to many,
+             many to many,
+             many to one.
+
+SQL - Structured query language
+-------------------------------
+> Data definition language - create , alter , drop , truncate
+
+> Data manupulation language - insert , update , delete
+
+> Data control language - grand , revoke
+
+> Transaction - commit , roleback , savepoint
+
+> Data query language - select
+
+Program using SQL
+------------------
+create table students(ID INT, Name varchar(20) , age INT , major varchar(10));
+
+insert into students (ID , Name , age , major) values 
+(1, 'Bala' , 19 , 'unity'),
+(2, 'Surya' , 20 , 'Engligh'),
+(3, 'Ashwin' , 19 , 'Biology'),
+(4, 'Brijesh' , 21 , 'Physics'),
+(5, 'Deepak' , 20 , 'Engligh'),
+(6, 'Florance' , 18 , 'Chemistry'),
+(7, 'vimal' , 21 , 'Computer science'),
+(8, 'chandra' , 19 , 'Maths'),
+(9, 'Prakash' , 20 , 'Tamil'),
+(10, 'Anirudh' , 22 , 'Physics');
+
+alter table students add column email varchar(50);
+
+update students set email = 'brijesh@gamil.com' where ID = 6;
+
+delete from students where id = 6;
+
+select * from students where id between 2 and 9;
+
+select * from students where name in ('Deepak' , 'Anirudh');
+
+OUTPUT :
+--------
+2|Surya|20|Engligh|
+3|Ashwin|19|Biology|
+4|Brijesh|21|Physics|
+5|Deepak|20|Engligh|
+7|vimal|21|Computer science|
+8|chandra|19|Maths|
+9|Prakash|20|Tamil|
+
+5|Deepak|20|Engligh|
+10|Anirudh|22|Physics|
+
+[Execution complete with exit code 0]
